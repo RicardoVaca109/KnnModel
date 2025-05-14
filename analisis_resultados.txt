@@ -1,0 +1,29 @@
+El siguiente ejercicio de regresión logística se realizo ocn un dataset sobre encender o no una bomba de agua
+para sembrios de algodón tomando en cuenta 
+humedad = 55, temperatura = 30
+Matriz de Confusión:
+[[12  2]  → Verdaderos Negativos (TN) = 12, Falsos Positivos (FP) = 2
+[ 0 36]]  → Falsos Negativos (FN) = 0, Verdaderos Positivos (TP) = 36
+Precisión del modelo:
+0.96
+
+Métricas:
+Precisión (Accuracy) = (TP + TN) / (TP + TN + FP + FN)
+(36 + 12) / (36 + 12 + 2 + 0) = 48 / 50 = 0.96
+El modelo predice correctamente 96 de cada 100 casos.
+Sensibilidad (Recall / Tasa de Verdaderos Positivos) = TP / (TP + FN)
+36 / (36 + 0) = 1.00
+Captura todos los casos donde la bomba debía encenderse (no hay falsos negativos).
+
+Especificidad (Tasa de Verdaderos Negativos) = TN / (TN + FP)
+12 / (12 + 2) = 0.8571
+El 85.7% de los casos donde la bomba no debía encenderse fueron predichos correctamente.
+
+Precisión (Precision) = TP / (TP + FP)
+36 / (36 + 2) = 0.9474
+De todas las veces que el modelo predijo que la bomba debía encenderse, el 94.7% eran correctas.
+
+Conclusiones:
+El modelo es muy confiable para predecir cuándo encender la bomba (recall = 100%).
+Tiene un pequeño margen de error al predecir falsamente que se debe encender la bomba cuando no era necesario (2 falsos positivos → especificidad < 100%).
+Es un modelo muy útil para automatización agrícola, especialmente si el objetivo es no dejar de regar cuando es necesario.
